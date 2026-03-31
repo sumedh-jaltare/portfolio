@@ -1,44 +1,81 @@
 # Sumedh Jaltare Portfolio
 
-Personal portfolio website built with React and Vite, showcasing projects, skills, experience, achievements, education, and live GitHub profile data.
+Modern developer portfolio built with React + Vite and styled with Tailwind CSS.
+
+## Highlights
+
+- Dark mode by default + light mode toggle
+- Fully responsive, mobile-first layout
+- Smooth animations with Framer Motion
+- Component-based structure
+- GitHub Pages-ready deployment setup
+
+## Sections Included
+
+- Hero
+- About
+- Skills
+- Projects
+- GitHub
+- Experience
+- Achievements
+- Education
+- Contact
 
 ## Tech Stack
 
 - React 19
-- Vite
-- Tailwind CSS
-- Framer Motion
+- Vite 8
+- Tailwind CSS 3
 - React Router
+- Framer Motion
 - GitHub REST API
 
-## Features
+## Project Structure
 
-- Animated hero section and smooth section transitions
-- Full resume-based content: About, Skills, Projects, Experience
-- Dedicated Achievements and Education sections
-- Live GitHub profile and repository feed
-- Contact section with direct links and email form action
+```text
+src/
+	components/
+		Navbar.jsx
+		Hero.jsx
+		About.jsx
+		Skills.jsx
+		Projects.jsx
+		ProjectCard.jsx
+		GitHubSection.jsx
+		Experience.jsx
+		Achievements.jsx
+		Education.jsx
+		Contact.jsx
+		SectionHeader.jsx
+	pages/
+		Home.jsx
+	lib/
+		githubApi.js
+	App.jsx
+	main.jsx
+```
 
-## Getting Started
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` in your browser.
+Open: `http://localhost:5173`
 
-## Available Scripts
+## Scripts
 
-- `npm run dev` - Start local development server
-- `npm run build` - Create production build
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint checks
-- `npm run deploy` - Deploy `dist` to GitHub Pages
+- `npm run dev` — start development server
+- `npm run build` — create production build
+- `npm run preview` — preview production build locally
+- `npm run lint` — run lint checks
+- `npm run deploy` — deploy `dist` to GitHub Pages using `gh-pages`
 
-## Environment Variables
+## Environment Variables (Optional)
 
-Create a `.env` file in the project root if needed:
+Create a `.env` file in the root only if needed:
 
 ```env
 VITE_GITHUB_USERNAME=sumedh-jaltare
@@ -46,11 +83,14 @@ VITE_GITHUB_TOKEN=your_optional_github_token
 ```
 
 - `VITE_GITHUB_USERNAME` defaults to `sumedh-jaltare`
-- `VITE_GITHUB_TOKEN` is optional and helps avoid API rate limits
+- `VITE_GITHUB_TOKEN` helps avoid GitHub API rate limits
 
-## Deployment
+## GitHub Pages Notes
 
-This project is configured for GitHub Pages.
+- Vite base path is configured for a repo deployment (`/portfolio/`).
+- Router is configured with `HashRouter` for GitHub Pages compatibility.
+
+Deploy:
 
 ```bash
 npm run build
@@ -58,4 +98,5 @@ npm run deploy
 ```
 
 Default deploy target:
+
 `https://github.com/sumedh-jaltare/portfolio.git`
